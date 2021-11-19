@@ -125,7 +125,7 @@ class EventsController extends Controller
 
         $event->save();
 
-        smilify('success', 'You have successfully reconnected');
+        smilify('success', 'Event Updated');
 
         return redirect()->route('events');
 

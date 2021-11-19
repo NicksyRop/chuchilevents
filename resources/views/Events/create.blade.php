@@ -11,7 +11,7 @@
         @csrf
         <div class="form-group">
             <label for="name">Event Name</label>
-            <input type="text" class="form-control" name="name" id="">
+            <input type="text" class="form-control" name="name" id="" value="{{ old('name')}}">
             @error('name')
                 <span class="error"  style="color: #ff8000">{{ $message }}</span>
             @enderror
@@ -35,7 +35,7 @@
 
         <div class="form-group">
             <label for="name">Event Small Description </label>
-           <textarea name="description" id="" cols="30" rows="3" class="form-control"></textarea>
+           <textarea name="description" id="" cols="30" rows="3" class="form-control" value="">{{ old('description')}}</textarea>
             @error('description')
                 <span class="error"  style="color: #ff8000">{{ $message }}</span>
             @enderror
@@ -43,7 +43,7 @@
 
         <div class="form-group">
             <label for="name">Event Price</label>
-            <input type="number" class="form-control" name="price" id="">
+            <input type="number" class="form-control" name="price" id="" value="{{ old('price')}}">
             @error('price')
                 <span class="error"  style="color: #ff8000">{{ $message }}</span>
             @enderror
@@ -51,14 +51,14 @@
 
         <div class="form-group">
             <label for="name">Availble Seats</label>
-            <input type="number" class="form-control" name="seats" id="">
+            <input type="number" class="form-control" name="seats" id="" value="{{ old('seats')}}">
             @error('seats')
                 <span class="error"  style="color: #ff8000">{{ $message }}</span>
             @enderror
         </div>
         <div class="form-group">
             <label for="name">Event Date</label>
-            <input type="datetime-local" class="form-control" name="date" id="">
+            <input type="datetime-local" class="form-control" name="date" id="" value="{{ old('date')}}">
             @error('date')
                 <span class="error"  style="color: #ff8000">{{ $message }}</span>
             @enderror
